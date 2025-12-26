@@ -19,19 +19,16 @@ if [ ! -f "$ALBUM_ART_PATH" ]; then
     unset ALBUM_ART_PATH
 fi
 
-# Show notification via AppleScript (osascript)
-if command -v /usr/bin/osascript >/dev/null 2>&1; then
-  # Escape double quotes in variables
-  SAFE_TITLE=$(echo "${TITLE:-Unknown Title}" | sed 's/"/\\"/g')
-  SAFE_ARTIST=$(echo "${ARTIST:-Unknown Artist}" | sed 's/"/\\"/g')
-  SAFE_ALBUM=$(echo "${ALBUM:-Unknown Album}" | sed 's/"/\\"/g')
-  
-  # Construct and execute the AppleScript notification
-  /usr/bin/osascript <<EOF
-    display notification "$SAFE_ALBUM" with title "$SAFE_TITLE" subtitle "$SAFE_ARTIST" sound name "default"
-EOF
+# Show notification via notify-send (Linux)
+if command -v notify-send >/dev/null 2>&1; then
+  # Use album art if available, otherwise just text
+  if [ -n "${ALBUM_ART_PATH:-}" ]; then
+      notify-send -i "$ALBUM_ART_PATH" "${TITLE:-Unknown Title}" "${ARTIST:-Unknown Artist} - ${ALBUM:-Unknown Album}"
+  else
+      notify-send "${TITLE:-Unknown Title}" "${ARTIST:-Unknown Artist} - ${ALBUM:-Unknown Album}"
+  fi
 else
-  >&2 printf 'osascript not available; notification skipped\n'
+  >&2 printf 'notify-send not available; notification skipped\n'
 fi
 
 # Fetch lyrics if missing
