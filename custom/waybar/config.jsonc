@@ -1,5 +1,6 @@
 {
   "reload_style_on_change": true,
+  "markup": true,
   "layer": "top",
   "position": "top",
   "spacing": 0,
@@ -56,15 +57,15 @@
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
     "clock": {
-        "format": " {:%I:%M %p}", // AM PM format
+        "format": "<span size='x-large'></span> <span size='smaller'>{:%I:%M %p}</span>", // AM PM format
         //"format": "  {:%H:%M}",// 24H
         "format-alt": "{:%A  %e %B}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
      },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-    "format": "{icon}",
-    "format-wifi": "{icon}",
+    "format": "<span size='x-large'>{icon}</span>",
+    "format-wifi": "<span size='x-large'>{icon}</span>",
     "format-ethernet": "󰀂",
     "format-disconnected": "󰤮",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
@@ -75,7 +76,7 @@
     "on-click": "omarchy-launch-wifi"
   },
   "battery": {
-    "format": "{capacity}% {icon}",
+    "format": "<span size='x-large'>{icon}</span> <span size='smaller'>{capacity}%</span>",
     "format-discharging": "{icon}",
     "format-charging": "{icon}",
     "format-plugged": "",
@@ -103,7 +104,7 @@
   },
 
   "pulseaudio": {
-    "format": "{icon} {volume}%",
+    "format": "<span size='x-large'>{icon}</span> <span size='smaller'>{volume}%</span>",
     "on-click": "omarchy-launch-or-focus-tui wiremix",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
@@ -137,7 +138,7 @@
     "return-type": "json"
   },
   "tray": {
-    "icon-size": 12,
+    "icon-size": 18,
     "spacing": 4
   },
 
