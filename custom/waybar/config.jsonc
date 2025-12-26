@@ -201,6 +201,8 @@
       "(.*?) - Chromium - chromium": "   $1 ",
       "(.*chrome)...(.*)": "   $1 ",
       "(.*) - Obsidian - .* - obsidian": "   $1 ",
+      "(.*) - Zen Browser - .* - zen": " 󰫫  $1 ",
+      "(.*) - Zed - .* - zed": " 󰳼  $1 ",
       "(.*nvim)...(.*)": "   $2 ",
       "(.*code) - (.*)": " 󰨞  $1 ",
       "^.*btop( .*|$)": " 󰧨 BTOP $1 ",
