@@ -1,0 +1,57 @@
+@define-color selected-text #8da1c8; /* highlight color */
+@define-color text #eff3f8; /* main text */
+@define-color base #182538; /* dark base/background */
+@define-color border #6cabda; /* visible border */
+@define-color foreground #eff3f8; /* foreground text */
+@define-color background #182538; /* main background */
+
+window * {
+    all: unset;
+    color: @text;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+}
+
+/* Show icons and make them 1% smaller than before */
+window .normal-icons,
+window .large-icons,
+window .item-image,
+window .symbols {
+    -gtk-icon-size: 32px; /* slightly smaller */
+    min-width: 32px;
+    min-height: 32px;
+    padding: 2px;
+    margin: 2px;
+    display: inline-block; /* make visible */
+}
+
+/* Box wrapper for windows */
+window .box-wrapper {
+    background: alpha(@base, 0.85); /* dark transparency */
+    border: 1px solid alpha(@border, 0.9); /* visible border */
+    border-radius: 10px;
+    padding: 6px;
+    margin: 0;
+    box-shadow: 0 2px 6px alpha(black, 0.25); /* subtle shadow */
+    backdrop-filter: none; /* no blur */
+}
+
+/* Search container */
+window .search-container {
+    border: 2px solid alpha(@border, 0.9); /* visible border */
+    border-radius: 8px;
+    padding: 4px 6px;
+    margin: 0;
+    background: alpha(@base, 0.8); /* slightly transparent */
+    box-shadow: inset 0 0 4px alpha(white, 0.05);
+    backdrop-filter: none; /* no blur */
+}
+
+/* Input field */
+window .input {
+    background: transparent;
+    color: @text;
+}
