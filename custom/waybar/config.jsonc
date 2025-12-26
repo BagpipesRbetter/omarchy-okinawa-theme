@@ -36,7 +36,7 @@
        }
    },
   "custom/omarchy": {
-    "format": "󰹡",
+    "format": "󰌽",
     "on-click": "omarchy-menu",
     "on-click-right": "xdg-terminal-exec",
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
@@ -202,7 +202,7 @@
       "(.*chrome)...(.*)": "   $1 ",
       "(.*) - Obsidian - .* - obsidian": "   $1 ",
       "(.*) - Zen Browser - .* - zen": " 󰫫  $1 ",
-      "(.*) - Zed - .* - zeditor": " 󰳼  $1 ",
+      "(.*) - Zed - .* - dev.zed.Zed": " 󰳼  $1 ",
       "(.*nvim)...(.*)": "   $2 ",
       "(.*code) - (.*)": " 󰨞  $1 ",
       "^.*btop( .*|$)": " 󰧨 BTOP $1 ",
