@@ -3,3 +3,41 @@
 @define-color label #eff3f8;
 @define-color image #eff3f8;
 @define-color progress #6cabda;
+
+window,
+.osd {
+    background-color: @background-color;
+    color: @label;
+}
+
+window.osd,
+.osd {
+    border: 2px solid @border-color;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+label {
+    color: @label;
+    font-weight: 600;
+}
+
+image {
+    color: @image;
+}
+
+progressbar {
+    min-width: 320px;
+}
+
+progressbar trough {
+    background-color: shade(@background-color, 0.8);
+    border-radius: 8px;
+    border: 1px solid @border-color;
+}
+
+progressbar progress {
+    background-color: @progress;
+    border-radius: 8px;
+}
