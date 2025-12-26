@@ -5,9 +5,14 @@
 @define-color progress #6cabda;
 
 window {
+    background-color: transparent;
+}
+
+#container {
     border-radius: 16px;
-    background: @background-color;
+    background-color: @background-color;
     border: 2px solid @border-color;
+    padding: 20px;
 }
 
 #image {
@@ -16,12 +21,23 @@ window {
 
 #label {
    color: @label;
+   margin-top: 10px;
 }
 
-progress, trough {
+progress, trough, slider {
     border-radius: 16px;
 }
 
-slider {
+progress {
+    outline: none;
+    min-height: 10px;
+}
+
+trough {
+    background-color: alpha(@label, 0.1);
+}
+
+progress highlight {
+    background-color: @progress;
     border-radius: 16px;
 }

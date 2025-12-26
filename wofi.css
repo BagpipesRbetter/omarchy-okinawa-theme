@@ -10,12 +10,15 @@
 window {
     background-color: @bg;
     border: 2px solid @gray3;
+    border-radius: 16px;
 }
 
 input {
     background-color: @bg;
     color: @fg;
     border: 1px solid @gray2;
+    border-radius: 8px;
+    margin: 10px;
 }
 
 input:selected {
