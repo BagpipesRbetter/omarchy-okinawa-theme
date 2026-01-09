@@ -5,7 +5,7 @@
     default_album_art_path: None,
     show_song_table_header: true,
     draw_borders: true,
-    lyrics_dir: Some("~/Music/Lossless Music/"),
+    lyrics_dir: Some("~/Music/"),
     on_song_change: ["~/.config/rmpc/Scripts/songchange.sh"],
     theme: Some("theme1"),
     format_tag_separator: " | ",
@@ -179,7 +179,7 @@
                                                 borders: "ALL",
                                                 pane: Pane(Queue),
                                             ),
-                                            
+
                                             (
                                                 size: "40%",
                                                 borders: "ALL",
@@ -199,7 +199,7 @@
                                                 borders: "ALL",
                                                 pane: Pane(AlbumArt),
                                             ),
-                                            
+
                                             (
                                                 size: "40%",
                                                 borders: "ALL",
