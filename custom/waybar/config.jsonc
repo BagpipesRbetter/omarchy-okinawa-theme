@@ -7,7 +7,7 @@
   "border-radius": 25,
   "margin-right": 10,
   "margin-left": 10,
-  "margin-top": 10,
+  "margin-top": 5,
   "modules-left": ["custom/omarchy", "hyprland/workspaces", "mpris"],
   "modules-center": ["hyprland/window" ],
   "modules-right": [
