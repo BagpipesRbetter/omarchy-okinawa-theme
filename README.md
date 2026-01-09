@@ -4,13 +4,22 @@ imageine that beach trip to okinawa in your favorite anime, thats this theme. oc
 
 # Installation
 
+## Easy Install (Recommended)
+Run the included script to install the theme and optional extras (RMPC, Waybar):
+```bash
+./install.sh
+```
+
+## Via Omarchy CLI
 ```bash
 omarchy-theme-install https://github.com/BagpipesRbetter/omarchy-okinawa-theme
 ```
 
 # Extras
 
-This theme includes custom configurations for **RMPC** and **Waybar** that are not installed automatically.
+The installation script (`./install.sh`) can automatically install these extras for you. It can also install and configure the **Music Setup** (`mpd`, `rmpc`, `mpd-mpris`).
+
+If you prefer to do it manually:
 
 ## RMPC (MPD Client)
 To use the custom RMPC theme:
